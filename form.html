@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="homelessness.css">
+
+<script src="https://kit.fontawesome.com/920ba322d1.js" crossorigin="anonymous"></script>
+
+<style>
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+
+<style>
+  body {
+    background-color: white;
+
+  }
+
+.footer {
+    position: absolute;
+    bottom: -1200px;
+    margin-top: auto;
+    background: #6c8c7c;
+    padding: -10px 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="navbar">
+      <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+        <div class="logo">
+          <h1></h1>
+        </div>
+        <div class="menu-items">
+          <li><a href="index.html">home</a></li>
+          <li><a href="form.html">georeferrence</a></li>
+          <li><a href="metadata.html">metadata</a></li>
+          <li><a href="data_maps.html">data</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section>
+<div class="login-box">
+  <h2>GEOREFERENCING VIOLENCE</h2>
+
+  <form name="submit-to-google-sheet">
+
+    <div class="user-box">
+      <input id="demo" name="Latitude" type="text" required>
+      <label>Latitude</label>
+    </div>
+    <div class="user-box">
+      <input id="demo2" name="Longitude" type="text" required>
+      <label>Longitude</label>
+    </div>
+
+<!--
+
+    <div class="user-box">
+      <input type="text" id="quantity" name="Capitais" list="capitais" required>
+      <label>Capitais</label>
+      <datalist id="capitais">
+        <option value="Aracaju"></option>
+        <option value="Belém"></option>
+        <option value="Belo Horizonte"></option>
+        <option value="Boa Vista"></option>
+        <option value="Brasília"></option>
+        <option value="Campo Grande"></option>
+        <option value="Cuiabá"></option>
+        <option value="Curitiba"></option>
+        <option value="Florianópolis"></option>
+        <option value="Fortaleza"></option>
+        <option value="Goiânia"></option>
+        <option value="João Pessoa"></option>
+        <option value="Macapá"></option>
+        <option value="Maceió"></option>
+        <option value="Manaus"></option>
+        <option value="Natal"></option>
+        <option value="Palmas"></option>
+        <option value="Porto Alegre"></option>
+        <option value="Porto Velho"></option>
+        <option value="Recife"></option>
+        <option value="Rio Branco"></option>
+        <option value="Rio de Janeiro"></option>
+        <option value="Salvador"></option>
+        <option value="São Luís"></option>
+        <option value="São Paulo"></option>
+        <option value="Teresina"></option>
+        <option value="Vitória"></option>
+      </datalist>
+    </div>
+-->
+    <div class="user-box">
+      <input type="text" id="quantity" name="ID" required>
+      <label>ID</label>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Quantity" list="quantities" min="1" step="1" required>
+      <label>Quantity</label>
+      <datalist id="quantities">
+      <option value="1"></option>
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Physical_Violence" list="quantities1" min="1" step="1" required>
+      <label>Physical Violence</label>
+      <datalist id="quantities1">
+      <option value="1"></option>
+      <option value="2">
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Psychological_Violence" list="quantities2" min="1" step="1" required>
+      <label>Psychological Violence</label>
+      <datalist id="quantities2">
+      <option value="1">
+      <option value="2">
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Institutional_Violence" list="quantities3" min="1" step="1" required>
+      <label>Institucional Violence</label>
+      <datalist id="quantities3">
+      <option value="1">
+      <option value="2">
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Discrimination" list="quantities4" min="1" step="1" required>
+      <label>Discrimination</label>
+      <datalist id="quantities4">
+      <option value="1">
+      <option value="2">
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Racial_Insults" list="quantities5" min="1" step="1" required>
+      <label>Racial Insult</label>
+      <datalist id="quantities5">
+      <option value="1">
+      <option value="2">
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Xenophobia" list="quantities6" min="1" step="1" required>
+      <label>Xenophobia</label>
+      <datalist id="quantities6">
+      <option value="1">
+      <option value="2">
+      </datalist>
+    </div>
+
+    <div class="user-box">
+      <input type="number" id="quantity" name="Negligence" list="quantities6" min="1" step="1" required>
+      <label>Negligence</label>
+      <datalist id="quantities6">
+      <option value="1">
+      <option value="2">
+      </datalist>
+    </div>
+
+
+    <a href="#">
+      <button onclick="getLocation()">Geolocate</button>
+    </a>
+
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <button type="submit">Send</button>
+    </a>
+  </form>
+</div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <!--
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-github"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+-->
+<ul class="menu">
+  <li class="menu__item"><a class="menu__link" href="index.html">home</a></li>
+  <li class="menu__item"><a class="menu__link" href="form.html">georreference</a></li>
+  <li class="menu__item"><a class="menu__link" href="metadata.html">metadata</a></li>
+  <li class="menu__item"><a class="menu__link" href="data_maps.html">data</a></li>
+</ul>
+  <p>&COPY; 2023 W. Migliari</p>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+    <div id="successmsg" hidden><div class="alert alert-success">
+    <br>
+    <strong style="color:white;"></strong>
+    </div></div>
+
+
+    <div id="errormsg" hidden><div class="alert alert-danger">
+    <strong>Error!</strong> There was an error sending your message.
+    </div></div>
+
+
+   <script>
+       const scriptURL = 'https://script.google.com/macros/s/AKfycbyUKUSWhAtEFKMVF1PIUxw3mdd2CqGbdpz8IJ0GrIAj_e0A2stU_58J01SvkigPNt6CQw/exec'
+       const form = document.forms['submit-to-google-sheet'];
+       const successmsg=document.getElementById('successmsg');
+       const errormsg=document.getElementById('errormsg');
+       form.addEventListener('submit', e => {
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+           .then(response => console.log('Success!', response),
+           //show success message
+           successmsg.hidden=false
+           )
+           .catch(error => errormsg.hidden=false)
+           //show error message
+
+
+           form.reset();
+       })
+
+     </script>
+
+
+<script>
+var x=document.getElementById("demo");
+var y=document.getElementById("demo2");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.value=position.coords.latitude;
+  y.value=position.coords.longitude;
+  }
+</script>
+
+</body>
+</html>
